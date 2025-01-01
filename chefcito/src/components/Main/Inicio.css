@@ -1,0 +1,113 @@
+.inicio {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: black;
+
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+    gap: 20px;
+    justify-items: center;
+    padding: 0 10px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 320px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 8px 16px rgba(1, 1, 1, 1);
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 1);
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .card-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2d9397;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #177f83;
+    transform: scale(1.05);
+  }
+  

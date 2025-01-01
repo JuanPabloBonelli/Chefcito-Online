@@ -48,7 +48,7 @@ const Idear = () => {
   const [ingredientToAdd, setIngredientToAdd] = useState(null);
   const [grams, setGrams] = useState('');
 
-  // Actualizar el puntaje nutricional
+  // use Effect para actualizar el puntaje nutricional. Utiliza la lógica de un regla de tres simples. El score por defecto se corresponde a 1000gr del alimento selecionado.
   useEffect(() => {
     const score = selectedIngredients.reduce(
       (total, ingredient) => total + ingredient.score,
@@ -57,7 +57,7 @@ const Idear = () => {
     setNutritionalScore(score);
   }, [selectedIngredients]);
 
-  // Manejar el drag and drop
+  // Drag and drop. Arrastre del ingrediente, permitiendo que se quede guardado tanto en su lugar original como en el nuevo. 
   const handleDragStart = (e, ingredient) => {
     e.dataTransfer.setData('ingredient', JSON.stringify(ingredient));
   };
@@ -82,8 +82,8 @@ const Idear = () => {
       { ...ingredientToAdd, grams, score: adjustedScore },
     ]);
 
-    setIngredientToAdd(null); // Cierra el modal
-    setGrams(''); // Resetea el input
+    setIngredientToAdd(null); 
+    setGrams(''); 
   };
 
   // Guardar la receta en localStorage
@@ -110,7 +110,7 @@ const Idear = () => {
   };
 
   return (
-    <>
+    <>  {/* HTML base de idear */}
       <section className="idear-container">
         <h1 id="idear">Idear</h1>
         <h2>¡Pon a prueba tu creatividad!</h2>
@@ -143,7 +143,7 @@ const Idear = () => {
           ))}
         </div>
 
-        {/* Zona de drop */}
+        {/* Zona de arrastre */}
         <div
           className="drop-zone"
           onDrop={handleDrop}
@@ -161,7 +161,7 @@ const Idear = () => {
         <button className="save-recipe" onClick={handleSaveRecipe}>Guardar Receta</button>
       
 
-      {/* Modal para ingresar la cantidad */}
+      {/* Ingreso de la cantidad en gramos */}
       {ingredientToAdd && (
         <div className="modal">
           <h3>¿Cuántos gramos de {ingredientToAdd.name}?</h3>

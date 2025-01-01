@@ -5,7 +5,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Cambiar el estado
+    setIsOpen(!isOpen); 
   };
 
   return (

@@ -1,7 +1,7 @@
 # **Chefcito Online 🍳**  
 **Proyecto Final React - UTN**  
 
-¡Bienvenido a **Chefcito Online**! 🌟 Este proyecto, desarrollado como parte del trabajo final para la UTN, es una aplicación web diseñada para revolucionar la forma en que exploramos y creamos recetas culinarias.  
+¡Bienvenido a **Chefcito Online**! 🌟 Este proyecto, desarrollado como parte del trabajo final para la UTN, es un sitio web diseñado para revolucionar la forma en que exploramos y creamos recetas culinarias.  
 
 ### 🔥 **¿Qué encontrarás en Chefcito Online?**  
 - **Hero:** Una sección de bienvenida visualmente impactante para captar tu atención desde el primer momento.  

@@ -22,6 +22,7 @@
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 1rem; /* Añadido para asegurar espacio en pantallas pequeñas */
   }
   
   .contacto-form label {
@@ -67,5 +68,50 @@
   
   .contacto-form textarea {
     resize: none;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .contacto {
+      padding: 1.5rem;
+    }
+  
+    .contacto h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contacto p {
+      font-size: 1rem;
+    }
+  
+    .btn-enviar {
+      padding: 10px 12px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contacto {
+      padding: 1rem;
+    }
+  
+    .contacto h2 {
+      font-size: 1.5rem;
+    }
+  
+    .contacto p {
+      font-size: 0.9rem;
+    }
+  
+    .contacto-form input,
+    .contacto-form textarea {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .btn-enviar {
+      padding: 8px 10px;
+      font-size: 0.75rem;
+    }
   }
   
